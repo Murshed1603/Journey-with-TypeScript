@@ -35,3 +35,5 @@ const friends = ['Nuhin', 'Fatin', 'Argha'];
 const[, balerFrnd,  ] = friends;
 
 console.log(balerFrnd);
+
+/// hi there
