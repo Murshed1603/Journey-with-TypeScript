@@ -9,9 +9,9 @@
 // };
 
 const UserRoles = {
-    Admin : "Admin",
-    Editor: "Editor", // javascript e object er bodole colon use korte hobe
-    Viewer: "Viewer",
+    Admin : "ADDMIN",
+    Editor: "EDITOR", // javascript e object er bodole colon use korte hobe
+    Viewer: "VIEWER",
 } as const;
 
 // UserRoles.Admin = 'Mon chacche';
@@ -31,7 +31,7 @@ const UserRoles = {
 // };
 
 
-const canEdit = (role: keyof typeof UserRoles) => {
+const canEdit = (role: (typeof UserRoles)[keyof typeof UserRoles]) => {
     if (role === UserRoles.Admin || role === UserRoles.Editor) {
         return true;
     } else {
